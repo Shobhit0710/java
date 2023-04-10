@@ -1,0 +1,12 @@
+package shobhit;
+
+public class day2 {
+String name = "shobhit";
+int id=49;
+public static void main(String[] args) {
+	day2 data=new day2();
+	System.out.println(data.name + " " + data.id);
+	System.out.println(data.id);
+	}
+}
+
