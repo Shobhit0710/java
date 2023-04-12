@@ -13,11 +13,16 @@ public class student {
 		 id=123;
 		name="xyz"; 
 	}
+	public student(int f) {
+		 id=12;
+		name="xy"; }
 	public static void main(String[] args) {
 	student s1= new student();
 	student s2= new student(49,"shobhit");
+	student s3= new student(21);
 	System.out.println(s2.id + " " + s2.name  + " " + s2.college);
 	System.out.println(s1.id + " " + s1.name + " " + s1.college);
+	System.out.println(s3.id + " " + s3.name + " " + s3.college);
 	
 }
 
