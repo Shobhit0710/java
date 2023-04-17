@@ -1,0 +1,23 @@
+package loop;
+
+import java.util.Scanner;
+
+public class foreach {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the range: ");
+		int j=sc.nextInt();
+		int arr[]= new int[j];
+		System.out.println("enter the elements of array");
+		
+		for(int i = 0;i<j;i++) {
+			arr[i]=sc.nextInt();
+		}
+		for(int i:arr) {
+			System.out.print(i+"\t");
+		
+		}
+
+}
+ 	}
