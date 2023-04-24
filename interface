@@ -1,0 +1,52 @@
+
+interface motor {
+	
+	void name();
+	void model();
+	void jeep();
+	void thar();
+
+}
+public class car implements motor{
+	car(){
+		System.out.println("this is a constructor of car");
+	}
+	public void name() {
+		System.out.println("name method run");
+	}
+	public void model() {
+			 System.out.println("model method run");
+			 
+		 }
+	
+ 
+public static void main(String[] args) {
+	car obj=new car();
+	car obj1= new suv();
+	obj.name();
+	obj.model();
+	obj1.jeep();
+	obj1.thar();
+}
+@Override
+public void jeep() {
+	System.out.println("blank");
+	
+}
+@Override
+public void thar() {
+	System.out.println("blank2");
+	
+}
+}
+class suv extends car{
+	suv(){
+		System.out.println("suv class constructor");
+		}
+	 public void jeep() {
+		System.out.println("jeep method run ");
+	}
+	 public void thar() {
+		 System.out.println("thar method run");
+	 }
+}
