@@ -1,0 +1,51 @@
+package shobhitlab;
+
+interface shapee {
+    public void draw();
+
+    public void erase();
+}
+
+interface Color {
+    public void setColor(String color);
+
+    public String getColor();
+}
+
+class Circlee implements shapee, Color {
+    private String color;
+
+    public Circlee(String color) {
+        this.color = color;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing a circle of color " + color);
+    }
+
+    @Override
+    public void erase() {
+        System.out.println("Erasing a circle of color " + color);
+    }
+
+    @Override
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    @Override
+    public String getColor() {
+        return color;
+    }
+}
+
+public class inherit {
+    public static void main(String[] args) {
+        Circlee circle = new Circlee("red");
+        circle.draw();
+        circle.erase();
+        circle.setColor("blue");
+        System.out.println("The color of the circle is " + circle.getColor());
+    }
+}
