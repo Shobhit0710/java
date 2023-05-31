@@ -1,0 +1,65 @@
+public class Number {
+
+    private double number;
+
+    public Number(double number) {
+        this.number = number;
+    }
+
+    public boolean isZero() {
+        return number == 0;
+    }
+
+    public boolean isPositive() {
+        return number > 0;
+    }
+
+    public boolean isNegative() {
+        return number < 0;
+    }
+
+    public boolean isOdd() {
+        return number % 2 != 0;
+    }
+
+    public boolean isEven() {
+        return number % 2 == 0;
+    }
+
+    public boolean isPrime() {
+        if (number <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public boolean isArmstrong() {
+        int sum = 0;
+        String str = String.valueOf(number);
+
+        for (int i = 0; i < str.length(); i++) {
+            sum += Math.pow(Integer.parseInt(str.charAt(i) + ""), str.length());
+        }
+
+        return sum == number;
+    }
+
+    public static void main(String[] args) {
+        Number number = new Number(153);
+
+        System.out.println("Is zero: " + number.isZero());
+        System.out.println("Is positive: " + number.isPositive());
+        System.out.println("Is negative: " + number.isNegative());
+        System.out.println("Is odd: " + number.isOdd());
+        System.out.println("Is even: " + number.isEven());
+        System.out.println("Is prime: " + number.isPrime());
+        System.out.println("Is Armstrong: " + number.isArmstrong());
+    }
+}
